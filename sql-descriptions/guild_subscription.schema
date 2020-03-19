@@ -1,0 +1,7 @@
+'guilds_id','char(36)','NO','PRI',NULL,''
+'picarto_channel_id','char(36)','NO','PRI',NULL,''
+'announce_private','tinyint','YES','',NULL,''
+'embed_template','json','YES','',NULL,''
+'created_at','timestamp','NO','',NULL,''
+'updated_at','timestamp','YES','',NULL,''
+'deleted_at','timestamp','YES','',NULL,''

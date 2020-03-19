@@ -1,0 +1,7 @@
+'id','char(36)','NO','PRI',NULL,''
+'guild_id','bigint unsigned','NO','UNI',NULL,''
+'webhook_id','bigint unsigned','YES','',NULL,''
+'webhook_token','char(68)','YES','',NULL,''
+'created_at','timestamp','NO','',NULL,''
+'updated_at','timestamp','YES','',NULL,''
+'deleted_at','timestamp','YES','',NULL,''
