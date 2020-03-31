@@ -1,0 +1,51 @@
+# Resolve using https://github.com/waitandseeagency/graphql-type-datetime#readme
+scalar DateTime
+# Resolve using https://github.com/taion/graphql-type-json
+scalar JSONObject
+
+type PicartoChannel {
+  id: ID!
+  userId: Int!
+  name: String
+  online: Boolean
+  private: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime
+  deletedAt: DateTime
+  # TODO(cooper): Consider extending with info from the Picarto API
+}
+
+type Guild {
+  id: ID
+  guildId: Int
+  webhookId: Int
+  webhookToken: String
+  createdAt: DateTime!
+  updatedAt: DateTime
+  deletedAt: DateTime
+  
+  subscriptions: [GuildSubscriptions]
+}
+
+type GuildSubscriptions {
+  guildId: ID!
+  guild: Guild!
+  picartoChannelId: ID!
+  picartoChannel: PicartoChannel!
+  announcePrivate: Boolean
+  embedTemplate: JSONObject
+  createdAt: DateTime!
+  updatedAt: DateTime
+  deletedAt: DateTime
+}
+
+type Query {
+}
+
+type Mutations {
+}
+
+schema {
+    query: Query
+    mutations: Mutations
+}
